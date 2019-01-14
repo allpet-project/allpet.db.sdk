@@ -19,7 +19,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="allpetdb.lib" Version="1.0.0" />
+    <PackageReference Include="allpet.db.lib" Version="1.0.0" />
     <PackageReference Include="System.Security.Cryptography.Algorithms" Version="4.3.1" />
   </ItemGroup>
 </Project>

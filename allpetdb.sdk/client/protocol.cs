@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace LoveAllpetDB.SDK
+namespace Allpet.DB.SDK
 {
     public static class protocol_Helper
     {
 
-        public static NetMessage PostMsg(this WebsocketBase socket, LoveAllpetDB.SDK.NetMessage msg)
+        public static NetMessage PostMsg(this WebsocketBase socket, Allpet.DB.SDK.NetMessage msg)
         {
             NetMessage __msg = null;
             socket.SendWithOnceCallback(msg, async (msgback) => 
@@ -34,7 +34,7 @@ namespace LoveAllpetDB.SDK
 
         public static NetMessage CreateSendMsg()
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_ping");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_ping");
             return msg;
         }
 
@@ -67,7 +67,7 @@ namespace LoveAllpetDB.SDK
     {
         public static NetMessage CreateSendMsg()
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_db.state");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_db.state");
             return msg;
         }
         public class message
@@ -119,7 +119,7 @@ namespace LoveAllpetDB.SDK
     {
         public static NetMessage CreateSendMsg(UInt64? height = null)
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_db.usesnapshot");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_db.usesnapshot");
             if (height != null)
             {
                 msg.Params["snapheight"] = BitConverter.GetBytes(height.Value);
@@ -157,7 +157,7 @@ namespace LoveAllpetDB.SDK
     {
         public static NetMessage CreateSendMsg(UInt64 height)
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_db.unusesnapshot");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_db.unusesnapshot");
             msg.Params["snapheight"] = BitConverter.GetBytes(height);
             return msg;
         }
@@ -192,7 +192,7 @@ namespace LoveAllpetDB.SDK
     {
         public static NetMessage CreateSendMsg(UInt64 height)
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_db.snapshot.dataheight");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_db.snapshot.dataheight");
             msg.Params["snapheight"] = BitConverter.GetBytes(height);
             return msg;
         }
@@ -227,7 +227,7 @@ namespace LoveAllpetDB.SDK
     {
         public static NetMessage CreateSendMsg(UInt64 snapid, byte[] tableid, byte[] key)
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_db.snapshot.getvalue");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_db.snapshot.getvalue");
             msg.Params["snapheight"] = BitConverter.GetBytes(snapid);
             msg.Params["tableid"] = tableid;
             msg.Params["key"] = key;
@@ -264,7 +264,7 @@ namespace LoveAllpetDB.SDK
     {
         public static NetMessage CreateSendMsg(UInt64 snapid, UInt64 blockid)
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_db.snapshot.getblock");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_db.snapshot.getblock");
             msg.Params["snapheight"] = BitConverter.GetBytes(snapid);
             msg.Params["blockid"] = BitConverter.GetBytes(blockid);
             return msg;
@@ -300,7 +300,7 @@ namespace LoveAllpetDB.SDK
     {
         public static NetMessage CreateSendMsg(UInt64 snapid, UInt64 blockid)
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_db.snapshot.getblockhash");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_db.snapshot.getblockhash");
             msg.Params["snapheight"] = BitConverter.GetBytes(snapid);
             msg.Params["blockid"] = BitConverter.GetBytes(blockid);
             return msg;
@@ -336,7 +336,7 @@ namespace LoveAllpetDB.SDK
     {
         public static NetMessage CreateSendMsg(UInt64 snapid)
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_db.snapshot.getwriter");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_db.snapshot.getwriter");
             msg.Params["snapheight"] = BitConverter.GetBytes(snapid);
             return msg;
         }
@@ -381,7 +381,7 @@ namespace LoveAllpetDB.SDK
     {
         public static NetMessage CreateSendMsg(byte[] tasksrcdata, SignData signdata)
         {
-            var msg = LoveAllpetDB.SDK.NetMessage.Create("_db.write");
+            var msg = Allpet.DB.SDK.NetMessage.Create("_db.write");
             msg.Params["taskdata"] = tasksrcdata;
             msg.Params["signdata"] = signdata.ToBytes();
             return msg;

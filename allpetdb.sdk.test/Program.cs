@@ -1,4 +1,4 @@
-﻿using LoveAllpetDB.SDK;
+﻿using Allpet.DB.SDK;
 using System;
 using System.IO;
 using System.Threading.Tasks;
@@ -8,7 +8,7 @@ namespace AllpetDB.testclient
     class Program
     {
 
-        static LoveAllpetDB.SDK.WebsocketBase client = new LoveAllpetDB.SDK.WebsocketBase();
+        static Allpet.DB.SDK.WebsocketBase client = new Allpet.DB.SDK.WebsocketBase();
         static System.Collections.Generic.Dictionary<string, Action<string[]>> menuItem = new System.Collections.Generic.Dictionary<string, Action<string[]>>();
         static System.Collections.Generic.Dictionary<string, string> menuDesc = new System.Collections.Generic.Dictionary<string, string>();
         static void AddMenu(string cmd, string desc, Action<string[]> onMenu)

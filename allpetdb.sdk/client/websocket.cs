@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Linq;
-namespace LoveAllpetDB.SDK
+namespace Allpet.DB.SDK
 {
     public delegate Task OnClientRecv(NetMessage msg);
     public delegate Task OnDisConnect();
@@ -53,7 +53,7 @@ namespace LoveAllpetDB.SDK
 
             return;
         }
-        public UInt64 Send(LoveAllpetDB.SDK.NetMessage msg)
+        public UInt64 Send(Allpet.DB.SDK.NetMessage msg)
         {
             UInt64 _id = 0;
             lock (this)
@@ -67,7 +67,7 @@ namespace LoveAllpetDB.SDK
             return _id;
         }
 
-        public void SendWithOnceCallback(LoveAllpetDB.SDK.NetMessage msg, OnClientRecv callback)
+        public void SendWithOnceCallback(Allpet.DB.SDK.NetMessage msg, OnClientRecv callback)
         {
             var _id = Send(msg);
             this.mapRecv[_id] = callback;

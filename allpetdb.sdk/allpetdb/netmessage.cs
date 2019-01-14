@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ThinNeo.VM;
 
-namespace LoveAllpetDB.SDK
+namespace Allpet.DB.SDK
 {
     public class NetMessage
     {

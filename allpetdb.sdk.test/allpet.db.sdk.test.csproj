@@ -10,11 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="allpetdb.struct.lib" Version="1.0.2" />
+    <PackageReference Include="allpet.db.struct.lib" Version="1.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\allpetdb.sdk\allpetdb.sdk.csproj" />
+    <ProjectReference Include="..\allpetdb.sdk\allpet.db.sdk.csproj" />
   </ItemGroup>
 
 </Project>
