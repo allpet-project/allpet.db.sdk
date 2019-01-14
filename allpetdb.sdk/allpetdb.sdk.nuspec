@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>allpetdb.sdk</id>
+    <version>1.0.0</version>
+    <title>allpetdb.sdk</title>
+    <authors>gaoxiqing</authors>
+    <owners>allpet</owners>
+    <projectUrl>https://github.com/allpet-project/allpetdb.sdk</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+	<dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="System.Security.Cryptography.Algorithms" version="4.3.1" exclude="Build,Analyzers" />
+        <dependency id="allpetdb.lib" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <copyright>Copyright 2019</copyright>
+    <tags>allpet db</tags>
+  </metadata>
+</package>
