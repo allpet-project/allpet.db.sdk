@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\allpetdb.sdk\allpetdb.sdk.csproj" />
+    <ProjectReference Include="..\allpetdb.sdk\allpet.db.sdk.csproj" />
   </ItemGroup>
 
 </Project>
